@@ -1,86 +1,98 @@
 <!DOCTYPE html>
-<html>
-
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>Nexa Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaSchool – Role-Based Dashboard System</title>
     <link rel="stylesheet" href="swag.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <section class="header">
-        <nav>
-            <a href="Homepage.html"><img src="download.png" alt="error404"></a>
-            <div class="taskbar" id="taskBar">
-                <i class="bi bi-x-lg mobile menu-close"onclick=hidemenu() id="close-menu"></i>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Student</a></li>
-                    <li><a href="">Teacher</a></li>
-                    <li><a href="">Admin</a></li>
-                </ul>
-            </div>
-            <i class="bi bi-list mobile open-menu"onclick=showmenu() id="menu-open"></i>
-        </nav>
-      
-<div class="text">
-    <center>
-    <h1>World's Best College</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Harum esse dolore deleniti sunt fugit eius rem non nostrum tempora doloremque.</p>
-    <a href=""class=""></a> 
-</center>
- </div>
- </section>
+
+<!-- ========== HEADER ========== -->
+<section class="header">
+    <nav>
+        <a href="Homepage.html"><img src="download.png" alt="NexaSchool Logo"></a>
+        <div class="taskbar" id="taskBar">
+            <i class="bi bi-x-lg mobile menu-close" onclick="hidemenu()" id="close-menu"></i>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="student_dashboard.html">Student</a></li>
+                <li><a href="teacher_dashboard.html">Teacher</a></li>
+                <li><a href="admin_dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+        <i class="bi bi-list mobile open-menu" onclick="showmenu()" id="menu-open"></i>
+    </nav>
+
+    <div class="text">
+        <center>
+            <h1>Welcome to NexaSchool</h1>
+            <p>The smartest way to manage assignments, announcements, and more.<br>Secure access for Students, Teachers, and Admins.</p>
+            <a href="#role-selection" class="btn">Get Started</a>
+        </center>
+    </div>
+</section>
+
+<!-- ========== WHATSAPP FLOATING BOX ========== -->
 <a href="https://wa.me/60128194811" target="_blank" class="whatsapp-box">
-  <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
-  <span>Chat on WhatsApp</span>
+    <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+    <span>Chat on WhatsApp</span>
 </a>
 
 <style>
-.whatsapp-box {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366; /* WhatsApp green */
-  color: white;
-  padding: 21px 21px;
-  border-radius: 80px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-size: 21px;
-  }
-
-.whatsapp-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-}
+    .whatsapp-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .whatsapp-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+    }
 </style>
 
-<div class="Available" >
-  <img src="ennaku terile 3.png" alt="">
-  <span>Now Available at all Devices!</span>
+<!-- ========== DEVICE SUPPORT SECTION ========== -->
+<div class="Available">
+    <img src="ennaku terile 3.png" alt="Device Compatibility">
+    <span>Now Available on All Devices!</span>
 </div>
 
- <script>
-    var taskBar=document.getElementById("taskBar")
-    function showmenu(){
-        taskBar.style.right="0";
+<!-- ========== ROLE SELECTION PAGE ========== -->
+<section id="role-selection" style="text-align: center; padding: 50px;">
+    <h2>Select Your Role</h2>
+    <p>Please choose your role to proceed to login:</p>
+
+    <div class="role-buttons" style="margin-top: 30px;">
+        <a href="login_student.html" class="btn">Student</a>
+        <a href="login_teacher.html" class="btn">Teacher</a>
+        <a href="login_admin.html" class="btn">Admin</a>
+    </div>
+</section>
+
+<!-- ========== SCRIPT FOR MOBILE NAV ========== -->
+<script>
+    var taskBar = document.getElementById("taskBar");
+    function showmenu() {
+        taskBar.style.right = "0";
     }
-    function hidemenu(){
-        taskBar.style.right="-200px";
+    function hidemenu() {
+        taskBar.style.right = "-200px";
     }
- </script>
-
-
- 
-
-
-
+</script>
 
 </body>
 </html>
+
+
